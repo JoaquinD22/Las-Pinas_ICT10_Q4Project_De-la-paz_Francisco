@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 10 Classmates System</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgba(163, 214, 85);
+            font-weight: bolder;
+        }
+
+
+        .container-box {
+            background: rgba(248, 253, 247, 0.98);
+            border-radius: 28px;
+            box-shadow: 0 22px 50px rgb(0, 0, 0, 0.18);
+            max-width: 720px;
+            padding: 42px 40px;
+            margin: 70px auto;
+            border: 1px solid rgba(81, 145, 100, 0.16);
+        }
+
+        .container-box {
+            position: relative;
+        }
+
+        h1, h2 {
+            color: rgb(63, 104, 3);
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-weight: 400;
+        }
+
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(92, 150, 108, 0.32);
+            outline: none;
+            background: #dadada;
+            color: #1f462d;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        input:focus {
+            border-color: #5c8c6c;
+            box-shadow: 0 0 0 3px rgba(92, 140, 108, 0.12);
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 8px;
+        }
+
+        button {
+            padding: 14px 28px;
+            background-color: #1b5827;
+            border-radius: 12px;
+            color: #ffffff;
+        }
+
+        .output-box {
+            margin-top: 24px;
+            padding: 22px;
+            background-color: #eef6ed;
+            border-radius: 16px;
+            color: #15422a;
+            text-align: left;
+        }
+
+        nav {
+            background-color: rgba(18, 58, 16, 0.8);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-brand, .nav-link {
+            color: #e8f5e9 !important;
+        }
+
+        .nav-link.active {
+            color: #c8f7c5 !important;
+            font-weight: 600;
+        }
+
+        footer {
+            margin-top: 18px;
+            padding: 16px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="font-weight: bold;">
+        <div class="container">
+            <a class="navbar-brand" href="index2.html">10-Emerald Company</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index2.html">Classmates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index3.html">Attendance Tracker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index4.html">Class memories</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-box">
+        <h1>Grade 10 Classmate finder/maker</h1>
+        <h2>Class of 25–26</h2>
+       
+
+        <input type="text" id="name" placeholder="Classmate Name">
+        <input type="text" id="section" placeholder="Section">
+        <input type="text" id="desiredJob" placeholder="Desired Job">
+
+        <div class="btn-group">
+       <button onclick="addClassmate()">Add New Classmate</button>
+       <button onclick="showList()">Show Current Classmate List</button>
+        </div>
+
+        <div class="output-box" id="signed"></div>
+        <div class="output-box" id="classmate-list"></div>
+    </div>
+
+    <footer>
+        <p id="footertext" style="text-align: center;">Joaquin Delapaz, Amber Francisco Company. All Rights Reserved.</p>
+    </footer>
+
+    <py-script src="index.py"></py-script>
+</body>
+</html>
